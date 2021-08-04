@@ -13,6 +13,9 @@ local key_mapper = function(mode, key, result, noremap)
     )
 end
 
+-- reload-hack
+vim.api.nvim_set_keymap("n", "<leader>sv", "<cmd>luafile $MYVIMRC<CR>", {noremap = true, silent = true})
+
 -- automatically select first match
 vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm({'keys': '<CR>', 'select': v:true})", {expr = true})
 
