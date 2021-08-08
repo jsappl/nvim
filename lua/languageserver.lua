@@ -14,6 +14,8 @@ require("compe").setup{
     };
 }
 
+require("lspconfig").julials.setup{}
+
 require("lspconfig").pyright.setup{}
 
 require("lspconfig").texlab.setup{}

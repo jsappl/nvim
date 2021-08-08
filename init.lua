@@ -43,4 +43,3 @@ load("settings")
 load("colors")
 load("languageserver")
 load("mappings")
-load("lspconfig").julials.setup{}
