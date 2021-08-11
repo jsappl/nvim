@@ -24,7 +24,11 @@ require("paq"){
     {"nvim-treesitter/nvim-treesitter", run="TSUpdate"};
 
     "neovim/nvim-lspconfig";
+    --"mfussenegger/nvim-lsp-compl";
     "hrsh7th/nvim-compe";
+    "ray-x/lsp_signature.nvim";
+
+    "mfussenegger/nvim-lint";
 
     --{"lervag/vimtex", opt=true};  -- Use braces when passing options
 

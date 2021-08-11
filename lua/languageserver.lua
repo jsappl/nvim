@@ -14,12 +14,6 @@ require("compe").setup{
     };
 }
 
-require("lspconfig").julials.setup{}
-
-require("lspconfig").pyright.setup{}
-
-require("lspconfig").texlab.setup{}
-
 --vim.cmd("inoremap <silent><expr> <C-Space> compe#complete()")
 --vim.cmd("inoremap <silent><expr> <CR>      compe#confirm('<CR>')")
 --vim.cmd("inoremap <silent><expr> <C-e>     compe#close('<C-e>')")

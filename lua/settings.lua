@@ -52,4 +52,7 @@ vim.cmd([[
     autocmd FileType sh setlocal et ts=2 sw=2
     autocmd FileType go setlocal noet ts=4 sw=4
 ]])
+
+vim.cmd([[let g:python3_host_prog = expand('$HOME/.pyenv/versions/neovim/bin/python')]])
+
 --TODO: filetype plugin indent on  -- Enable filetype detection and load its settings
