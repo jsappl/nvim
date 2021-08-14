@@ -34,19 +34,12 @@ require("paq"){
 
     --{"lervag/vimtex", opt=true};  -- Use braces when passing options
 
-    -- required in order to make reload-hack work
     "nvim-lua/plenary.nvim";
 }
 
 -- Source config files
 
--- reload-hack: allow reloading lua config
-_G.load = function(file)
-    require("plenary.reload").reload_module(file, true)
-    return require(file)
-end
-load("settings")
-load("colors")
-load("languageserver")
-load("mappings")
-load("linter")
+require("settings")
+require("colors")
+require("languageserver")
+require("mappings")
