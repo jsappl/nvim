@@ -38,6 +38,8 @@ opt.syntax = "on"          -- Enable syntax highlighting
 
 opt.autowriteall = true    -- Save files when opening new files
 
+vim.g.python3_host_prog = "$HOME/.pyenv/versions/neovim/bin/python"
+
 -- toggle number modes (normal mode = relative, other modes = absolute)
 vim.cmd([[
     augroup numbertoggle
@@ -54,8 +56,5 @@ vim.cmd([[
 ]])
 -- autocmd FileType lua setlocal et ts=2 sw=2
 
-vim.cmd([[
-    let g:python3_host_prog = expand('$HOME/.pyenv/versions/neovim/bin/python')
-]])
 
 --TODO: filetype plugin indent on  -- Enable filetype detection and load its settings
