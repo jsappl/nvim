@@ -56,16 +56,37 @@ local on_attach = function(client, bufnr)
         }
     })
 
-    --require("lsp_compl").attach(client, bufnr)
-
+    -- Auto format (TODO need some capabilities to toggle auto formatting and add manual format keymap (normal, and
+    -- visual for range formatting)
+    if client.resolved_capabilities.document_formatting then
+        vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+    end
 end
+
+-- Specify linters/formatter (TODO refactor...)
+
+require("null-ls").config({
+    sources = {
+        require("null-ls").builtins.diagnostics.flake8,
+        require("null-ls").builtins.formatting.isort,
+        require("null-ls").builtins.formatting.yapf,
+    }
+})
+
 
 -- Use a loop to conveniently call "setup" on multiple servers and
 -- map buffer local keybindings when the language server attaches
 -- FIXME: split definitions of keybindings in on_attach function with lua/languageserver.lua file
-local servers = { "pyright", "gopls", "julials", "texlab" }
-for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
+
+local servers = {
+    pyright = {},
+    gopls = {},
+    julials = {},
+    texlab = {},
+    ["null-ls"] = {},
+}
+for server, cfg in pairs(servers) do
+    nvim_lsp[server].setup {
         on_attach = on_attach,
         flags = {
             debounce_text_changes = 150,
