@@ -30,7 +30,6 @@ require("paq"){
     "hrsh7th/nvim-compe";
     "ray-x/lsp_signature.nvim";
 
-
     --{"lervag/vimtex", opt=true};  -- Use braces when passing options
 
     "nvim-lua/plenary.nvim";
@@ -42,5 +41,7 @@ require("paq"){
 
 require("settings")
 require("colors")
-require("languageserver")
+require("lsp")
 require("mappings")
+
+require("plugins.compe")
