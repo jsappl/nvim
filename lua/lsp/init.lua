@@ -1,5 +1,4 @@
 -- Init language server protocol config
-
 local nvim_lsp = require("lspconfig")
 
 local function on_attach(client, bufnr)
@@ -16,13 +15,11 @@ local servers = {
     gopls = {},
     julials = {},
     texlab = {},
-    ["null-ls"] = {},
+    ["null-ls"] = {}
 }
 for server, cfg in pairs(servers) do
     nvim_lsp[server].setup {
         on_attach = on_attach,
-        flags = {
-            debounce_text_changes = 150,
-        }
+        flags = {debounce_text_changes = 150}
     }
 end
