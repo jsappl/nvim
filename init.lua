@@ -36,6 +36,9 @@ require("paq")({
 
   "kyazdani42/nvim-web-devicons",
   "folke/trouble.nvim",
+
+  -- TODO has bug, see issue https://github.com/simrat39/symbols-outline.nvim/issues/61
+  "simrat39/symbols-outline.nvim",
 })
 
 -- Source config files
