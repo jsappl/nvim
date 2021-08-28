@@ -18,8 +18,6 @@ require("paq")({
   "Mofiqul/dracula.nvim",
   "hoob3rt/lualine.nvim",
 
-  -- {"kyazdani42/nvim-web-devicons", opt=true};
-
   { "nvim-treesitter/nvim-treesitter", run = "TSUpdate" },
 
   "neovim/nvim-lspconfig",
@@ -35,6 +33,9 @@ require("paq")({
 
   "nvim-lua/plenary.nvim",
   "jose-elias-alvarez/null-ls.nvim", -- requires plenary and lspconfig
+
+  "kyazdani42/nvim-web-devicons",
+  "folke/trouble.nvim",
 })
 
 -- Source config files
@@ -45,3 +46,4 @@ require("lsp")
 require("mappings")
 
 require("plugins.cmp")
+require("plugins.trouble")
