@@ -41,3 +41,7 @@ vim.api.nvim_set_keymap(
   "<cmd>Trouble lsp_references<cr>",
   { silent = true, noremap = true }
 )
+
+-- Tree bindings
+key_mapper("n", "<leader>n", "<cmd>NvimTreeToggle<cr>")
+key_mapper("n", "<leader>m", "<cmd>NvimTreeFindFile<cr>")

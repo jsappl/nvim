@@ -39,6 +39,8 @@ require("paq")({
 
   -- TODO has bug, see issue https://github.com/simrat39/symbols-outline.nvim/issues/61
   "simrat39/symbols-outline.nvim",
+
+  "kyazdani42/nvim-tree.lua",
 })
 
 -- Source config files
@@ -50,3 +52,4 @@ require("mappings")
 
 require("plugins.cmp")
 require("plugins.trouble")
+require("plugins.tree")
