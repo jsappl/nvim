@@ -23,7 +23,12 @@ require("paq")({
   { "nvim-treesitter/nvim-treesitter", run = "TSUpdate" },
 
   "neovim/nvim-lspconfig",
-  "hrsh7th/nvim-compe",
+
+  "hrsh7th/cmp-buffer",
+  "hrsh7th/cmp-nvim-lua",
+  "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/nvim-cmp",
+
   "ray-x/lsp_signature.nvim",
 
   -- {"lervag/vimtex", opt=true};  -- Use braces when passing options
@@ -39,4 +44,4 @@ require("colors")
 require("lsp")
 require("mappings")
 
-require("compe")
+require("plugins.cmp")

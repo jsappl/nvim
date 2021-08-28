@@ -10,6 +10,7 @@ end
 
 require("lsp.null-ls").setup()
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
 local servers = {
   pyright = {},
   gopls = {},
@@ -20,6 +21,7 @@ local servers = {
 for server, cfg in pairs(servers) do
   nvim_lsp[server].setup({
     on_attach = on_attach,
+    capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities),
     flags = { debounce_text_changes = 150 },
   })
 end
