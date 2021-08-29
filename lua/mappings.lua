@@ -45,3 +45,30 @@ vim.api.nvim_set_keymap(
 -- Tree bindings
 key_mapper("n", "<leader>n", "<cmd>NvimTreeToggle<cr>")
 key_mapper("n", "<leader>m", "<cmd>NvimTreeFindFile<cr>")
+
+-- fzy bindings
+--TODO move result arguments to plugins.fzy and provide as module. e.g. fzy.find_file, fzy.find_buffer, ...
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ff",
+  "<cmd>lua local fzy = require('plugins.fzy'); fzy.execute('fd', fzy.sinks.edit_file)<cr>",
+  { silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fb",
+  "<cmd>lua require('plugins.fzy').actions.buffers()<cr>",
+  { silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>ft",
+  "<cmd>lua local fzy = require('plugins.fzy'); fzy.try(fzy.actions.lsp_tags, fzy.actions.buf_tags)<cr>",
+  { silent = true, noremap = true }
+)
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fg",
+  "<cmd>lua local fzy = require('plugins.fzy'); fzy.execute('git ls-files', fzy.sinks.edit_file)<cr>",
+  { silent = true, noremap = true }
+)

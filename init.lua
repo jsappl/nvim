@@ -40,7 +40,11 @@ require("paq")({
   -- TODO has bug, see issue https://github.com/simrat39/symbols-outline.nvim/issues/61
   "simrat39/symbols-outline.nvim",
 
+  -- TODO adding nvim-tree slows down start up. Status bar shows up with some delay
   "kyazdani42/nvim-tree.lua",
+
+  -- TODO <leader>ff doesn't really work, search window immediately collapses
+  "mfussenegger/nvim-fzy",
 })
 
 -- Source config files
@@ -53,3 +57,4 @@ require("mappings")
 require("plugins.cmp")
 require("plugins.trouble")
 require("plugins.tree")
+require("plugins.fzy")
