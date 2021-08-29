@@ -45,6 +45,9 @@ require("paq")({
 
   -- TODO <leader>ff doesn't really work, search window immediately collapses
   "mfussenegger/nvim-fzy",
+
+  -- TODO work through their default config, see gitsigns repo
+  "lewis6991/gitsigns.nvim",
 })
 
 -- Source config files
@@ -58,3 +61,4 @@ require("plugins.cmp")
 require("plugins.trouble")
 require("plugins.tree")
 require("plugins.fzy")
+require("plugins.gitsigns")
