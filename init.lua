@@ -16,6 +16,7 @@ vim.cmd("packadd paq-nvim")
 require("paq")({
   "savq/paq-nvim", -- Let Paq manage itself
   "Mofiqul/dracula.nvim",
+  "gkapfham/vim-vitamin-onec",
   "hoob3rt/lualine.nvim",
 
   { "nvim-treesitter/nvim-treesitter", run = "TSUpdate" },
@@ -28,8 +29,6 @@ require("paq")({
   "hrsh7th/nvim-cmp",
 
   "ray-x/lsp_signature.nvim",
-
-  -- {"lervag/vimtex", opt=true};  -- Use braces when passing options
 
   "nvim-lua/plenary.nvim",
   "jose-elias-alvarez/null-ls.nvim", -- requires plenary and lspconfig
