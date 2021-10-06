@@ -5,6 +5,7 @@ local M = {}
 function M.setup(client, buf)
   nls.config({
     sources = {
+      nls.builtins.diagnostics.chktex,
       nls.builtins.diagnostics.flake8,
       nls.builtins.diagnostics.luacheck,
       nls.builtins.formatting.isort,

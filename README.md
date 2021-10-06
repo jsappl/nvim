@@ -51,3 +51,13 @@ We use `prettier` to obtain an out-of-the-box experience for some common web dev
 ```shell
 pacman -S prettier
 ```
+
+## Texlab and Chktex
+
+We install Texlab with
+
+```shell
+pacman -S Texlab
+```
+
+Chktex is already part of TeXLive.
