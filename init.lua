@@ -47,17 +47,20 @@ require("paq")({
 
   -- TODO work through their default config, see gitsigns repo
   "lewis6991/gitsigns.nvim",
+
+  "lukas-reineke/indent-blankline.nvim",
 })
 
 -- Source config files
 
-require("settings")
 require("colors")
 require("lsp")
 require("mappings")
+require("settings")
 
 require("plugins.cmp")
-require("plugins.trouble")
-require("plugins.tree")
 require("plugins.fzy")
 require("plugins.gitsigns")
+require("plugins.indent")
+require("plugins.tree")
+require("plugins.trouble")
