@@ -15,6 +15,7 @@ local servers = {
   pyright = {},
   gopls = {},
   julials = {},
+  bashls = {},
   ["null-ls"] = {},
 }
 for server, _ in pairs(servers) do
