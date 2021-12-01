@@ -11,44 +11,48 @@ end
 require("lsp.null-ls").setup()
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+
 local servers = {
   pyright = {},
   gopls = {},
   julials = {},
   bashls = {},
-  ["null-ls"] = {},
-}
-for server, _ in pairs(servers) do
-  nvim_lsp[server].setup({
-    on_attach = on_attach,
-    capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities),
-    flags = { debounce_text_changes = 150 },
-  })
-end
-
-nvim_lsp.texlab.setup({
-  on_attach = on_attach,
-  capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities),
-  flags = { debounce_text_changes = 150 },
-  settings = {
-    texlab = {
-      auxDirectory = "build",
-      build = {
-        onSave = true,
-        forwardSearchAfter = false,
-        args = {
-          "-pdf",
-          "-shell-escape",
-          "-interaction=nonstopmode",
-          "-synctex=1",
-          "%f",
-          "-outdir=build",
+  texlab = {
+    settings = {
+      texlab = {
+        auxDirectory = "build",
+        build = {
+          onSave = true,
+          forwardSearchAfter = false,
+          args = {
+            "-pdf",
+            "-shell-escape",
+            "-interaction=nonstopmode",
+            "-synctex=1",
+            "%f",
+            "-outdir=build",
+          },
         },
-      },
-      forwardSearch = {
-        executable = "zathura",
-        args = { "--synctex-forward", "%l:1:%f", "%p" },
+        forwardSearch = {
+          executable = "zathura",
+          args = { "--synctex-forward", "%l:1:%f", "%p" },
+        },
       },
     },
   },
-})
+  ["null-ls"] = {},
+}
+
+local capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+
+local options = {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+}
+
+for server, cfg in pairs(servers) do
+  nvim_lsp[server].setup(vim.tbl_extend("keep", options, cfg))
+end
