@@ -72,6 +72,14 @@ vim.api.nvim_set_keymap(
   "<cmd>lua local fzy = require('plugins.fzy'); fzy.execute('git ls-files', fzy.sinks.edit_file)<cr>",
   { silent = true, noremap = true }
 )
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fl",
+  "<cmd>lua local fzy = require('plugins.fzy'); fzy.execute('ag --nobreak --noheading .', require('utils').fzy_edit_ag_selection)<cr>",
+  { silent = true, noremap = true }
+)
+
+-- TexLab bindings
 vim.api.nvim_set_keymap("n", "<leader>l", "<cmd>TexlabBuild<cr>", {
   silent = true,
   noremap = true,
@@ -80,12 +88,3 @@ vim.api.nvim_set_keymap("n", "<leader>v", "<cmd>TexlabForward<cr>", {
   silent = true,
   noremap = true,
 })
-
--- TODO need to parse selection such that we can open it (:e +{line_number} {file_path})
---   Opened an issue https://github.com/mfussenegger/nvim-fzy/issues/15
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>af",
-  "<cmd>lua local fzy = require('plugins.fzy'); fzy.execute('ag --nobreak --noheading .', fzy.sinks.edit_file)<cr>",
-  { silent = true, noremap = true }
-)
