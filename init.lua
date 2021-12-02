@@ -49,6 +49,9 @@ require("paq")({
   "lewis6991/gitsigns.nvim",
 
   "lukas-reineke/indent-blankline.nvim",
+
+  -- TODO work through their default config and replace default_mapping with own
+  "rmagatti/goto-preview",
 })
 
 -- Source config files
@@ -62,5 +65,6 @@ require("plugins.cmp")
 require("plugins.fzy")
 require("plugins.gitsigns")
 require("plugins.indent")
+require("plugins.preview")
 require("plugins.tree")
 require("plugins.trouble")
