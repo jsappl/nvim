@@ -52,6 +52,9 @@ require("paq")({
 
   -- TODO work through their default config and replace default_mapping with own
   "rmagatti/goto-preview",
+
+  -- TODO work through their default config, see which-key repo
+  "folke/which-key.nvim",
 })
 
 -- Source config files
@@ -68,3 +71,4 @@ require("plugins.indent")
 require("plugins.preview")
 require("plugins.tree")
 require("plugins.trouble")
+require("plugins.which")
