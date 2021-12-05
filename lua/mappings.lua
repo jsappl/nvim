@@ -88,3 +88,15 @@ vim.api.nvim_set_keymap("n", "<leader>v", "<cmd>TexlabForward<cr>", {
   silent = true,
   noremap = true,
 })
+
+-- Formatting
+-- TODO add range formatting
+vim.api.nvim_set_keymap("n", "<leader>tf", "<cmd>lua require('lsp.formatting').toggle()<CR>", {
+  silent = true,
+  noremap = true,
+})
+
+vim.api.nvim_set_keymap("n", "<leader>b", "<cmd>lua vim.lsp.buf.formatting()<CR>", {
+  silent = true,
+  noremap = true,
+})

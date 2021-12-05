@@ -1,12 +1,22 @@
 local M = {}
 
+-- Inspired by folke/dot files, lot's of room to improve formatting
+-- https://github.com/folke/dot/blob/master/config/nvim/lua/config/lsp/formatting.lua
+
 M.autoformat = true
 
+-- TODO refactor
 function M.toggle()
-  -- Check
-  -- https://github.com/folke/dot/blob/cb117f763f6d135a507f28530ac377034f5cda68/config/nvim/lua/config/lsp/formatting.lua
-  -- Auto format (TODO need some capabilities to toggle auto formatting and add manual format keymap (normal, and
-  -- visual for range formatting)
+  M.autoformat = not M.autoformat
+  local hl = "DiagnosticInfo"
+  local name = "Formatting"
+
+  -- TODO create some logging utils (https://github.com/folke/dot/blob/master/config/nvim/lua/util/init.lua)
+  if M.autoformat then
+    vim.api.nvim_echo({ { name .. ": ", hl }, { "enabled format on save" } }, true, {})
+  else
+    vim.api.nvim_echo({ { name .. ": ", hl }, { "disabled format on save" } }, true, {})
+  end
 end
 
 function M.format()
