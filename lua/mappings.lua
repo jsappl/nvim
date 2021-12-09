@@ -22,24 +22,11 @@ utils.nnoremap("<leader>m", "<cmd>NvimTreeFindFile<cr>")
 
 -- fzy
 --TODO move result arguments to plugins.fzy and provide as module. e.g. fzy.find_file, fzy.find_buffer, ...
-utils.nnoremap(
-  "<leader>ff",
-  "<cmd>lua local fzy = require('plugins.fzy'); fzy.execute('fd', fzy.sinks.edit_file)<cr>"
-)
-utils.nnoremap("<leader>fb", "<cmd>lua require('plugins.fzy').actions.buffers()<cr>")
-utils.nnoremap(
-  "<leader>ft",
-  "<cmd>lua local fzy = require('plugins.fzy'); fzy.try(fzy.actions.lsp_tags, fzy.actions.buf_tags)<cr>"
-)
-utils.nnoremap(
-  "<leader>fg",
-  "<cmd>lua local fzy = require('plugins.fzy'); fzy.execute('git ls-files', fzy.sinks.edit_file)<cr>"
-)
-utils.nnoremap(
-  "<leader>fl",
-  "<cmd>lua local fzy = require('plugins.fzy'); fzy.execute('ag --nobreak --noheading .',"
-    .. "require('utils').fzy_edit_ag_selection)<cr>"
-)
+utils.nnoremap("<leader>ff", "<cmd>lua require('plugins.fzy').find_file()<cr>")
+utils.nnoremap("<leader>fb", "<cmd>lua require('plugins.fzy').find_buffer()<cr>")
+utils.nnoremap("<leader>ft", "<cmd>lua require('plugins.fzy').find_tag()<cr>")
+utils.nnoremap("<leader>fg", "<cmd>lua require('plugins.fzy').find_git_file()<cr>")
+utils.nnoremap("<leader>fl", "<cmd>lua require('plugins.fzy').live_grep()<cr>")
 
 -- texlab
 utils.nnoremap("<leader>l", "<cmd>TexlabBuild<cr>")

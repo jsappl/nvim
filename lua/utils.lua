@@ -2,15 +2,6 @@ local api = vim.api
 
 local M = {}
 
-function M.fzy_edit_ag_selection(selection)
-  if not selection then
-    return
-  end
-  local parts = vim.split(selection, ":")
-  local path, line = parts[1], parts[2]
-  vim.cmd("e +" .. line .. " " .. path)
-end
-
 -- local map helper
 local function map(mode, key, result, opts, defaults)
   opts = vim.tbl_extend("force", { silent = true }, defaults or {}, opts or {})
