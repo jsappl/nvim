@@ -12,7 +12,7 @@ local function edit_ag_selection(selection)
 end
 
 function M.find_file()
-  return fzy.execute("fd", fzy.sinks.edit_file)
+  return fzy.execute("fd --type file", fzy.sinks.edit_file)
 end
 
 function M.find_buffer()
