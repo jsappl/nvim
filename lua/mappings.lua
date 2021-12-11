@@ -5,6 +5,30 @@ vim.g.mapleader = " "
 
 -- general mappings
 
+-- switch to previous/next tab
+utils.nnoremap("<C-n>", ":bnext<cr>")
+utils.nnoremap("<C-p>", ":bprevious<cr>")
+
+-- disable ex module
+utils.nnoremap("Q", "<Nop>")
+
+-- clear search highlights
+utils.nnoremap("<leader>/", ":nohlsearch<cr><C-L>")
+
+-- resize windows
+utils.nnoremap("<C-Up>", ":resize +3<CR>")
+utils.nnoremap("<C-Down>", ":resize -3<CR>")
+utils.nnoremap("<C-Left>", ":vertical resize -6<CR>")
+utils.nnoremap("<C-Right>", ":vertical resize +6<CR>")
+
+-- improved indenting
+utils.vnoremap("<", "<gv")
+utils.vnoremap(">", ">gv")
+
+-- copy & paste
+utils.nnoremap("<leader>y", '"+y')
+utils.vnoremap("<leader>y", '"+y')
+
 -- plugin mappings
 
 -- trouble
