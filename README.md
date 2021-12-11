@@ -16,6 +16,23 @@ pacman -S gopls
 
 A good test resource can be installed via `git clone https://go.googlesource.com/example`.
 
+## TexLab
+
+```shell
+pacman -S texlab
+```
+
+## Bash
+
+```shell
+pacman -S bash-language-server
+```
+
+## Julia
+
+Read and follow instructions from
+[here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#julials).
+
 # Formatters and Linters
 
 ## Python
@@ -52,12 +69,6 @@ We use `prettier` to obtain an out-of-the-box experience for some common web dev
 pacman -S prettier
 ```
 
-## Texlab and Chktex
-
-We install Texlab with
-
-```shell
-pacman -S Texlab
-```
+## Chktex
 
 Chktex is already part of TeXLive.
