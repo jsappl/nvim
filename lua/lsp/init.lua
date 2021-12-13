@@ -8,7 +8,7 @@ local function on_attach(client, bufnr)
   require("lsp.formatting").setup(client, bufnr)
 end
 
-require("lsp.null-ls").setup()
+require("lsp.null-ls").setup(on_attach)
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 

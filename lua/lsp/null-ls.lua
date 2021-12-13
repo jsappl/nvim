@@ -2,7 +2,7 @@ local nls = require("null-ls")
 
 local M = {}
 
-function M.setup()
+function M.setup(on_attach)
   nls.setup({
     sources = {
       nls.builtins.diagnostics.chktex,
@@ -15,6 +15,7 @@ function M.setup()
       nls.builtins.formatting.yapf,
       nls.builtins.formatting.stylua,
     },
+    on_attach = on_attach,
   })
 end
 
