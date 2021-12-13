@@ -2,8 +2,8 @@ local nls = require("null-ls")
 
 local M = {}
 
-function M.setup(client, buf)
-  nls.config({
+function M.setup()
+  nls.setup({
     sources = {
       nls.builtins.diagnostics.chktex,
       nls.builtins.diagnostics.flake8,
