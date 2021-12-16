@@ -8,6 +8,7 @@ function M.setup(on_attach)
       nls.builtins.diagnostics.chktex,
       nls.builtins.diagnostics.flake8,
       nls.builtins.diagnostics.luacheck,
+      nls.builtins.diagnostics.shellcheck,
       nls.builtins.formatting.isort,
       nls.builtins.formatting.prettier.with({
         filetypes = { "html", "json", "yaml", "markdown", "css" },

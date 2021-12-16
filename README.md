@@ -64,3 +64,11 @@ pacman -S prettier
 ## Chktex
 
 Chktex is already part of TeXLive.
+
+## Bash
+
+We install `shellcheck`, which is programmed in Haskell and comes with a few dependencies.
+
+```shell
+pacman -S shellcheck
+```
