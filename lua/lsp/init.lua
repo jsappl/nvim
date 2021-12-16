@@ -14,7 +14,6 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 local servers = {
   pyright = {},
-  gopls = {},
   julials = {},
   bashls = {},
   texlab = {
