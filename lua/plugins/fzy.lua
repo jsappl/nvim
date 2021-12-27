@@ -2,15 +2,6 @@ local fzy = require("fzy")
 
 local M = {}
 
-local function edit_ag_selection(selection)
-  if not selection then
-    return
-  end
-  local parts = vim.split(selection, ":")
-  local path, line = parts[1], parts[2]
-  vim.cmd("e +" .. line .. " " .. path)
-end
-
 function M.find_file()
   return fzy.execute("fd --type file", fzy.sinks.edit_file)
 end
@@ -28,7 +19,7 @@ function M.find_git_file()
 end
 
 function M.live_grep()
-  return fzy.execute("ag --nobreak --noheading .", edit_ag_selection)
+  return fzy.execute("ag --nobreak --noheading .", fzy.sinks.edit_live_grep)
 end
 
 return M
