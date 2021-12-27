@@ -51,6 +51,7 @@ vim.cmd([[
 
 -- various file formats
 vim.cmd([[
+    autocmd FileType lua setlocal et ts=2 sw=2
     autocmd FileType sh setlocal et ts=2 sw=2
     autocmd FileType go setlocal noet ts=4 sw=4
 ]])
