@@ -22,7 +22,7 @@ local servers = {
         auxDirectory = "build",
         build = {
           onSave = true,
-          forwardSearchAfter = false,
+          forwardSearchAfter = true,
           args = {
             "-pdf",
             "-shell-escape",
