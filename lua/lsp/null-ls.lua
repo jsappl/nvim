@@ -5,7 +5,9 @@ local M = {}
 function M.setup(on_attach)
   nls.setup({
     sources = {
-      nls.builtins.diagnostics.chktex,
+      nls.builtins.diagnostics.chktex.with({
+        args = { "-q", "-f%l:%c:%d:%k:%n:%m\n" , "-I" },
+      }),
       nls.builtins.diagnostics.flake8,
       nls.builtins.diagnostics.luacheck,
       nls.builtins.diagnostics.shellcheck,

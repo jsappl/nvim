@@ -16,7 +16,6 @@ vim.cmd("packadd paq-nvim")
 require("paq")({
   "savq/paq-nvim", -- Let Paq manage itself
   "Mofiqul/dracula.nvim",
-  "gkapfham/vim-vitamin-onec",
   "hoob3rt/lualine.nvim",
 
   { "nvim-treesitter/nvim-treesitter", run = "TSUpdate" },
