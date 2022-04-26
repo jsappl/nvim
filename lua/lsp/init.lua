@@ -39,6 +39,7 @@ local servers = {
       },
     },
   },
+  r_language_server = {},
 }
 
 local capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
