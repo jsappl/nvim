@@ -6,6 +6,16 @@ require("nvim-tree").setup({
   diagnostics = { enable = true },
   update_focused_file = { enable = true },
   git = { ignore = true },
-  indent_markers = 1,
-  disable_window_picker = 1,
+  renderer = {
+    indent_markers = {
+      enable = true,
+    },
+  },
+  actions = {
+    open_file = {
+      window_picker = {
+        enable = true,
+      },
+    },
+  },
 })
