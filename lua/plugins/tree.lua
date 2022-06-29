@@ -1,6 +1,3 @@
--- https://github.com/kyazdani42/nvim-tree.lua/issues/674
-vim.g.nvim_tree_git_hl = 1
-
 require("nvim-tree").setup({
   disable_netrw = false,
   diagnostics = { enable = true },
@@ -10,6 +7,7 @@ require("nvim-tree").setup({
     indent_markers = {
       enable = true,
     },
+    highlight_git = true,
   },
   actions = {
     open_file = {
