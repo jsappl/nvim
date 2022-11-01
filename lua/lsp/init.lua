@@ -10,8 +10,6 @@ end
 
 require("lsp.null-ls").setup(on_attach)
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-
 local servers = {
   pyright = {},
   julials = {},
@@ -42,7 +40,7 @@ local servers = {
   r_language_server = {},
 }
 
-local capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local options = {
   on_attach = on_attach,
