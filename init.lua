@@ -26,6 +26,7 @@ require("paq")({
   "hrsh7th/cmp-nvim-lua",
   "hrsh7th/cmp-nvim-lsp",
   "hrsh7th/nvim-cmp",
+  "hrsh7th/cmp-path",
 
   "ray-x/lsp_signature.nvim",
 
