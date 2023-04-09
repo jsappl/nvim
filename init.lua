@@ -35,7 +35,6 @@ require("paq")({
 
   "simrat39/symbols-outline.nvim",
 
-  -- TODO adding nvim-tree slows down start up. Status bar shows up with some delay
   "kyazdani42/nvim-tree.lua",
 
   -- TODO <leader>ff doesn't really work, search window immediately collapses
