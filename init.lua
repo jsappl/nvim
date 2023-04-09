@@ -4,13 +4,11 @@
 local install_path = vim.fn.stdpath("data") .. "/site/pack/paqs/start/paq-nvim"
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  vim.cmd("!git clone --depth 1 https://github.com/savq/paq-nvim.git " .. install_path)
-
-  -- TODO if we arrive here, we shouldn't continue. Further down it's assumed that Paq is available...
+  os.execute("git clone --depth 1 https://github.com/savq/paq-nvim.git " .. install_path)
 end
 
 -- load Paq
-vim.cmd("packadd paq-nvim")
+vim.cmd.packadd("paq-nvim")
 
 -- load plugins
 require("paq")({
