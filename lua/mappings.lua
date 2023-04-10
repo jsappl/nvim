@@ -47,8 +47,6 @@ utils.nnoremap("<leader>m", "<cmd>NvimTreeFindFile<cr>")
 -- fzy
 --TODO move result arguments to plugins.fzy and provide as module. e.g. fzy.find_file, fzy.find_buffer, ...
 utils.nnoremap("<leader>ff", "<cmd>lua require('plugins.fzy').find_file()<cr>")
-utils.nnoremap("<leader>fb", "<cmd>lua require('plugins.fzy').find_buffer()<cr>")
-utils.nnoremap("<leader>ft", "<cmd>lua require('plugins.fzy').find_tag()<cr>")
 utils.nnoremap("<leader>fg", "<cmd>lua require('plugins.fzy').find_git_file()<cr>")
 utils.nnoremap("<leader>fl", "<cmd>lua require('plugins.fzy').live_grep()<cr>")
 

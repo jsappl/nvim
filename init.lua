@@ -37,7 +37,6 @@ require("paq")({
 
   "kyazdani42/nvim-tree.lua",
 
-  -- TODO <leader>ff doesn't really work, search window immediately collapses
   "mfussenegger/nvim-fzy",
 
   -- TODO work through their default config, see gitsigns repo
