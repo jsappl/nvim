@@ -57,4 +57,4 @@ utils.nnoremap("<leader>v", "<cmd>TexlabForward<cr>")
 -- Formatting
 -- TODO add range formatting
 utils.nnoremap("<leader>tf", "<cmd>lua require('lsp.formatting').toggle()<CR>")
-utils.nnoremap("<leader>b", "<cmd>lua vim.lsp.buf.formatting()<CR>")
+utils.nnoremap("<leader>b", "<cmd>lua vim.lsp.buf.format { async = true }<CR>")
