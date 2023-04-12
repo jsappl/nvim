@@ -54,6 +54,9 @@ utils.nnoremap("<leader>fl", "<cmd>lua require('plugins.fzy').live_grep()<cr>")
 utils.nnoremap("<leader>l", "<cmd>TexlabBuild<cr>")
 utils.nnoremap("<leader>v", "<cmd>TexlabForward<cr>")
 
+-- symbols
+utils.nnoremap("<leader>so", "<cmd>SymbolsOutline<cr>")
+
 -- Formatting
 -- TODO add range formatting
 utils.nnoremap("<leader>tf", "<cmd>lua require('lsp.formatting').toggle()<CR>")
