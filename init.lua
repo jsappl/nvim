@@ -16,7 +16,12 @@ require("paq")({
   "Mofiqul/dracula.nvim",
   "hoob3rt/lualine.nvim",
 
-  { "nvim-treesitter/nvim-treesitter", run = "TSUpdate" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    run = function()
+      vim.cmd("TSUpdate")
+    end,
+  },
 
   "neovim/nvim-lspconfig",
 
