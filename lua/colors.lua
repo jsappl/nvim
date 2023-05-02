@@ -10,8 +10,26 @@ require("lualine").setup({
   },
 })
 
+--- TODO why is this in colors? Move this to appropriate place
 require("nvim-treesitter.configs").setup({
-  ensure_installed = "all",
+  ensure_installed = {
+    "python",
+    "lua",
+    "bash",
+    "bibtex",
+    "comment",
+    "r",
+    "julia",
+    "yaml",
+    "vim",
+    "toml",
+    "latex",
+    "json",
+    "html",
+    "help",
+    "fish",
+    "css",
+  },
   highlight = {
     enable = true,
   },
