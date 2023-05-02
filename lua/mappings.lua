@@ -28,6 +28,10 @@ utils.vnoremap(">", ">gv")
 -- copy & paste
 utils.nnoremap("<leader>y", '"+y')
 utils.vnoremap("<leader>y", '"+y')
+-- copy text with hard line wraps replaced by soft ones
+-- TODO clear search highlights afterwards
+-- stylua: ignore
+utils.xnoremap("<leader>yt", [[:s/\([^\\_^]\)\n\([^\n]\)/\1 \2/<cr>gv"+yu]])
 
 -- plugin mappings
 
