@@ -26,7 +26,7 @@ require("nvim-treesitter.configs").setup({
     "latex",
     "json",
     "html",
-    "help",
+    "vimdoc",
     "fish",
     "css",
   },
