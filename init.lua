@@ -14,7 +14,7 @@ vim.cmd.packadd("paq-nvim")
 require("paq")({
   "savq/paq-nvim", -- Let Paq manage itself
   "Mofiqul/dracula.nvim",
-  "hoob3rt/lualine.nvim",
+  "nvim-lualine/lualine.nvim",
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -36,12 +36,12 @@ require("paq")({
   "nvim-lua/plenary.nvim",
   "jose-elias-alvarez/null-ls.nvim", -- requires plenary and lspconfig
 
-  "kyazdani42/nvim-web-devicons",
+  "nvim-tree/nvim-web-devicons",
   "folke/trouble.nvim",
 
   "simrat39/symbols-outline.nvim",
 
-  "kyazdani42/nvim-tree.lua",
+  "nvim-tree/nvim-tree.lua",
 
   "mfussenegger/nvim-fzy",
 
