@@ -1,5 +1,21 @@
--- Init language server protocol config
-local nvim_lsp = require("lspconfig")
+-- Init Mason (note: needs to be loaded before lspconfig)
+-- TODO
+--  * Refactor Mason related setups into custom mason module
+--  * Use single ensure_installed list
+require("mason").setup()
+require("mason-lspconfig").setup({
+  ensure_installed = {
+    "marksman",
+  },
+})
+
+require("mason-null-ls").setup({
+  ensure_installed = {
+    -- "black",
+    -- "isort",
+  },
+})
+-- Init null-ls
 
 local function on_attach(client, bufnr)
   require("lsp.keys").setup(client, bufnr)
@@ -9,6 +25,9 @@ local function on_attach(client, bufnr)
 end
 
 require("lsp.null-ls").setup(on_attach)
+
+-- Init language server protocol config
+local nvim_lsp = require("lspconfig")
 
 local servers = {
   pyright = {},

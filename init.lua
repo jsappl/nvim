@@ -23,6 +23,14 @@ require("paq")({
     end,
   },
 
+  -- TODO PaqInstall will raise an error, as it can't call MasonUpdate yet.
+  {
+    "williamboman/mason.nvim",
+    run = function()
+      vim.cmd("MasonUpdate")
+    end,
+  },
+  "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
 
   "hrsh7th/nvim-cmp", -- completion engine
@@ -35,6 +43,7 @@ require("paq")({
 
   "nvim-lua/plenary.nvim",
   "jose-elias-alvarez/null-ls.nvim", -- requires plenary and lspconfig
+  "jay-babu/mason-null-ls.nvim",
 
   "nvim-tree/nvim-web-devicons",
   "folke/trouble.nvim",
