@@ -5,6 +5,7 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
   ensure_installed = {
+    "ltex",
     "marksman",
   },
 })
@@ -15,8 +16,8 @@ require("mason-null-ls").setup({
     -- "isort",
   },
 })
--- Init null-ls
 
+-- Init null-ls
 local function on_attach(client, bufnr)
   require("lsp.keys").setup(client, bufnr)
   require("lsp.signature").setup(client, bufnr)
@@ -30,9 +31,12 @@ require("lsp.null-ls").setup(on_attach)
 local nvim_lsp = require("lspconfig")
 
 local servers = {
-  pyright = {},
-  julials = {},
   bashls = {},
+  julials = {},
+  ltex = { language = "en-US" },
+  marksman = {},
+  pyright = {},
+  r_language_server = {},
   texlab = {
     settings = {
       texlab = {
@@ -56,7 +60,6 @@ local servers = {
       },
     },
   },
-  r_language_server = {},
 }
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()

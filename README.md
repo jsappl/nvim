@@ -8,10 +8,16 @@ Add language server to config with `lspconfig` if not otherwise mentioned.
 pacman -S pyright
 ```
 
-## TexLab
+## Latex: TexLab and LTeX
 
 ```shell
 pacman -S texlab
+```
+
+LTeX binaries are installed using `Mason`. However, `JAVA_HOME` is required to be defined:
+
+```
+pacman -S jre-openjdk-headless
 ```
 
 ## Bash
@@ -36,7 +42,7 @@ To-Do: packages installed in virtual env and linked into ~/bin? Or install syste
 We use `luacheck` and `stylua`.
 
 **Note:** Tried `luaformatter` first, but the out-of-box experience with `stylua` is just much better. But comes of cost
-of adding `rust` and using it's package manager.
+of adding `rust` and using its package manager.
 
 ```shell
 pacman -S luarocks
