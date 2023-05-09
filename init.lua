@@ -64,6 +64,11 @@ require("paq")({
 
   -- TODO work through their default config, see which-key repo
   "folke/which-key.nvim",
+
+  {
+    "toppair/peek.nvim",
+    run = "deno task --quiet build:fast",
+  },
 })
 
 -- Source config files
@@ -77,6 +82,7 @@ require("plugins.cmp")
 require("plugins.fzy")
 require("plugins.gitsigns")
 require("plugins.indent")
+require("plugins.peek")
 require("plugins.preview")
 require("plugins.symbolsoutline")
 require("plugins.tree")

@@ -16,7 +16,7 @@ pacman -S texlab
 
 LTeX binaries are installed using `Mason`. However, `JAVA_HOME` is required to be defined:
 
-```
+```shell
 pacman -S jre-openjdk-headless
 ```
 
@@ -78,3 +78,15 @@ We install `shellcheck`, which is programmed in Haskell and comes with a few dep
 ```shell
 pacman -S shellcheck
 ```
+
+# Other tools
+
+## Deno
+
+We install `deno` as a requirement for `peek.nvim`.
+
+```shell
+pacman -S deno webkit2gtk
+```
+
+Also, add `no_focus [title="^Peek preview$"]` to the `sway` config.

@@ -65,3 +65,6 @@ utils.nnoremap("<leader>so", "<cmd>SymbolsOutline<cr>")
 -- TODO add range formatting
 utils.nnoremap("<leader>tf", "<cmd>lua require('lsp.formatting').toggle()<CR>")
 utils.nnoremap("<leader>b", "<cmd>lua vim.lsp.buf.format()<CR>")
+
+-- peek markdown preview
+utils.nnoremap("<leader>tp", "<cmd>lua require('plugins.peek').toggle()<CR>")
