@@ -33,6 +33,11 @@ utils.vnoremap("<leader>y", '"+y')
 -- stylua: ignore
 utils.xnoremap("<leader>yt", [[:s/\([^\\_^]\)\n\([^\n]\)/\1 \2/<cr>gv"+yu]])
 
+-- formatting
+-- TODO add range formatting
+utils.nnoremap("<leader>tf", "<cmd>lua require('lsp.formatting').toggle()<CR>")
+utils.nnoremap("<leader>b", "<cmd>lua vim.lsp.buf.format()<CR>")
+
 -- plugin mappings
 
 -- trouble
@@ -60,11 +65,6 @@ utils.nnoremap("<leader>v", "<cmd>TexlabForward<cr>")
 
 -- symbols
 utils.nnoremap("<leader>so", "<cmd>SymbolsOutline<cr>")
-
--- Formatting
--- TODO add range formatting
-utils.nnoremap("<leader>tf", "<cmd>lua require('lsp.formatting').toggle()<CR>")
-utils.nnoremap("<leader>b", "<cmd>lua vim.lsp.buf.format()<CR>")
 
 -- peek markdown preview
 utils.nnoremap("<leader>tp", "<cmd>lua require('plugins.peek').toggle()<CR>")
