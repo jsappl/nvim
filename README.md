@@ -79,6 +79,16 @@ We install `shellcheck`, which is programmed in Haskell and comes with a few dep
 pacman -S shellcheck
 ```
 
+## Debuggers
+
+# Python
+
+We use `debugpy`.
+
+```shell
+pacman -S python debugpy
+```
+
 # Other tools
 
 ## Deno

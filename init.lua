@@ -69,6 +69,9 @@ require("paq")({
     "toppair/peek.nvim",
     run = "deno task --quiet build:fast",
   },
+
+  "mfussenegger/nvim-dap",
+  "mfussenegger/nvim-dap-python",
 })
 
 -- Source config files
@@ -88,3 +91,4 @@ require("plugins.symbolsoutline")
 require("plugins.tree")
 require("plugins.trouble")
 require("plugins.which")
+require("plugins.dap")
