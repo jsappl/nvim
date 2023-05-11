@@ -71,27 +71,26 @@ utils.nnoremap("<leader>tp", "<cmd>lua require('plugins.peek').toggle()<CR>")
 
 -- nvim-dap
 
-utils.nnoremap("<F5>", "<cmd>lua require('dap').continue()")
-
-utils.nnoremap("<F10>", "<cmd>lua require('dap').step_over()")
-utils.nnoremap("<F11>", "<cmd>lua require('dap').step_into()")
-utils.nnoremap("<F12>", "<cmd>lua require('dap').step_out()")
-utils.nnoremap("<Leader>b", "<cmd>lua require('dap').toggle_breakpoint()")
-utils.nnoremap("<Leader>B", "<cmd>lua require('dap').set_breakpoint()")
+utils.nnoremap("<F5>", "<cmd>lua require('dap').continue()<cr>")
+utils.nnoremap("<F10>", "<cmd>lua require('dap').step_over()<cr>")
+utils.nnoremap("<F11>", "<cmd>lua require('dap').step_into()<cr>")
+utils.nnoremap("<F12>", "<cmd>lua require('dap').step_out()<cr>")
+utils.nnoremap("<Leader>b", "<cmd>lua require('dap').toggle_breakpoint()<cr>")
+utils.nnoremap("<Leader>B", "<cmd>lua require('dap').set_breakpoint()<cr>")
 utils.nnoremap(
   "<Leader>lp",
-  "<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))"
+  "<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>"
 )
-utils.nnoremap("<Leader>dr", "<cmd>lua require('dap').repl.open()")
-utils.nnoremap("<Leader>dl", "<cmd>lua require('dap').run_last()")
+utils.nnoremap("<Leader>dr", "<cmd>lua require('dap').repl.open()<cr>")
+utils.nnoremap("<Leader>dl", "<cmd>lua require('dap').run_last()<cr>")
 
-utils.nnoremap("<Leader>dh", "<cmd>lua require('dap.ui.widgets').hover()")
-utils.vnoremap("<Leader>dh", "<cmd>lua require('dap.ui.widgets').hover()")
+utils.nnoremap("<Leader>dh", "<cmd>lua require('dap.ui.widgets').hover()<cr>")
+utils.vnoremap("<Leader>dh", "<cmd>lua require('dap.ui.widgets').hover()<cr>")
 
-utils.nnoremap("<Leader>dp", "<cmd>lua require('dap.ui.widgets').preview()")
-utils.vnoremap("<Leader>dp", "<cmd>lua require('dap.ui.widgets').preview()")
+utils.nnoremap("<Leader>dp", "<cmd>lua require('dap.ui.widgets').preview()<cr>")
+utils.vnoremap("<Leader>dp", "<cmd>lua require('dap.ui.widgets').preview()<cr>")
 
---FIXME move funciton to plugin and provide as module method
+--TODO move funciton to plugin and provide as module method
 --utils.nnoremap("<Leader>df", function()
 --  local widgets = require("dap.ui.widgets")
 --  widgets.centered_float(widgets.frames)
@@ -102,5 +101,5 @@ utils.vnoremap("<Leader>dp", "<cmd>lua require('dap.ui.widgets').preview()")
 --end)
 
 -- nvim-dap-python
-utils.nnoremap("<Leader>dn", "<cmd>lua require('dap-python').test_method()")
-utils.nnoremap("<Leader>df", "<cmd>lua require('dap-python').test_class()")
+utils.nnoremap("<Leader>dn", "<cmd>lua require('dap-python').test_method()<cr>")
+utils.nnoremap("<Leader>df", "<cmd>lua require('dap-python').test_class()<cr>")
