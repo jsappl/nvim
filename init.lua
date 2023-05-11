@@ -74,6 +74,8 @@ require("paq")({
   "rcarriga/nvim-dap-ui",
   "theHamsta/nvim-dap-virtual-text",
   "mfussenegger/nvim-dap-python",
+
+  "norcalli/nvim-colorizer.lua",
 })
 
 -- Source config files
@@ -94,3 +96,4 @@ require("plugins.tree")
 require("plugins.trouble")
 require("plugins.which")
 require("plugins.dap")
+require("plugins.colorizer")
