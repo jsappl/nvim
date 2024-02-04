@@ -18,7 +18,7 @@ require("paq")({
 
   {
     "nvim-treesitter/nvim-treesitter",
-    run = function()
+    build = function()
       vim.cmd("TSUpdate")
     end,
   },
@@ -26,7 +26,7 @@ require("paq")({
   -- TODO PaqInstall will raise an error, as it can't call MasonUpdate yet.
   {
     "williamboman/mason.nvim",
-    run = function()
+    build = function()
       vim.cmd("MasonUpdate")
     end,
   },
@@ -67,7 +67,7 @@ require("paq")({
 
   {
     "toppair/peek.nvim",
-    run = "deno task --quiet build:fast",
+    build = "deno task --quiet build:fast",
   },
 
   "mfussenegger/nvim-dap",
