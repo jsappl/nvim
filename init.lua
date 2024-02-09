@@ -49,9 +49,6 @@ require("colors")
 -- 
 --   "folke/trouble.nvim",
 -- 
---   "simrat39/symbols-outline.nvim",
--- 
--- 
 --   "mfussenegger/nvim-fzy",
 -- 
 --   -- TODO work through their default config, see gitsigns repo
@@ -88,7 +85,6 @@ require("colors")
 -- require("plugins.indent")
 -- require("plugins.peek")
 -- require("plugins.preview")
--- require("plugins.symbolsoutline")
 -- require("plugins.trouble")
 -- require("plugins.which")
 -- require("plugins.dap")
