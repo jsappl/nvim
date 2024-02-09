@@ -40,7 +40,17 @@ return {
 		end,
 	},
 
-	-- code: LSP, formatters, linters, completion
+  {
+    "lukas-reineke/indent-blankline.nvim",
+		opts = function()
+			return require "plugins.configs.indentblankline"
+		end,
+		config = function(_, opts)
+			require("ibl").setup(opts)
+		end,
+  },
+
+	-- LSP, formatters, linters
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
