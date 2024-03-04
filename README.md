@@ -1,5 +1,11 @@
 # LSP Configuration
 
+## TODO
+
+https://wiki.archlinux.org/title/Language_Server_Protocol
+
+We prefer system-wide LSP installs over `mason.nvim`.
+
 Add language server to config with `lspconfig` if not otherwise mentioned.
 
 ## Python
@@ -65,6 +71,10 @@ We use `prettier` to obtain an out-of-the-box experience for some common web dev
 
 ```shell
 pacman -S prettier
+```
+
+```shell
+pacman -S marksman
 ```
 
 ## Chktex
