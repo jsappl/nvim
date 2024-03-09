@@ -172,9 +172,11 @@ return {
 
   {
     "hrsh7th/nvim-cmp",
+    version = false, -- last release v0.0.1 from August 14, 2022
     event = "InsertEnter",
     dependencies = {
       "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-emoji",
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-nvim-lsp-signature-help",
       "hrsh7th/cmp-nvim-lua",

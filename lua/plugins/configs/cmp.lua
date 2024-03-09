@@ -22,7 +22,9 @@ return {
   -- You should specify your *installed* sources.
   sources = {
     { name = "buffer" },
+    { name = "emoji" },
     { name = "nvim_lsp" },
+    { name = "nvim_lsp_signature_help" },
     { name = "nvim_lua" },
     { name = "path" },
   },
