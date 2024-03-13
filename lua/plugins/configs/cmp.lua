@@ -28,4 +28,9 @@ return {
     { name = "nvim_lua" },
     { name = "path" },
   },
+
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
 }
