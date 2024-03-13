@@ -41,7 +41,9 @@ Read and follow instructions from
 
 ## Python
 
-To-Do: packages installed in virtual env and linked into ~/bin? Or install system-wide with pacman?
+```shell
+pacman -S ruff
+```
 
 ## Lua
 

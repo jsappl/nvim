@@ -1,8 +1,12 @@
 return {
   formatters_by_ft = {
+    css = { "prettier" },
+    fish = { "fish_indent" },
+    html = { "prettier" },
+    json = { "prettier" },
     lua = { "stylua" },
-    -- Conform will run multiple formatters sequentially
-    -- python = { "isort", "black" },
-    -- Use a sub-list to run only the first available formatter
+    markdown = { "prettier" },
+    python = { "ruff_fix", "ruff_format" },
+    yaml = { "prettier" },
   },
 }
