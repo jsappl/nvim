@@ -16,51 +16,51 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- TODO: nice ordering. mapleader has to be set before lazy (odd)
-require("keymaps")
+require("configs.keymaps")
 
 require("lazy").setup("plugins", require("plugins.configs.lazy"))
 
 -- Source other modules
-require("settings")
-require("colors")
+require("configs.settings")
+require("configs.colors")
 
 -- load plugins
 -- require("paq")({
 --   -- TODO PaqInstall will raise an error, as it can't call MasonUpdate yet.
 --
 --   "ray-x/lsp_signature.nvim",
--- 
+--
 --   "jose-elias-alvarez/null-ls.nvim", -- requires plenary and lspconfig
 --   "jay-babu/mason-null-ls.nvim",
--- 
+--
 --   "folke/trouble.nvim",
--- 
+--
 --   "mfussenegger/nvim-fzy",
--- 
+--
 --   -- TODO work through their default config, see gitsigns repo
 --   "lewis6991/gitsigns.nvim",
--- 
+--
 --   "lukas-reineke/indent-blankline.nvim",
--- 
+--
 --   -- TODO work through their default config and replace default_mapping with own
 --   "rmagatti/goto-preview",
--- 
+--
 --   -- TODO work through their default config, see which-key repo
 --   "folke/which-key.nvim",
--- 
+--
 --   {
 --     "toppair/peek.nvim",
 --     build = "deno task --quiet build:fast",
 --   },
--- 
+--
 --   "mfussenegger/nvim-dap",
 --   "rcarriga/nvim-dap-ui",
 --   "theHamsta/nvim-dap-virtual-text",
 --   "mfussenegger/nvim-dap-python",
--- 
+--
 --   "norcalli/nvim-colorizer.lua",
 -- })
--- 
+--
 -- -- Source config files
 
 -- require("lsp")
