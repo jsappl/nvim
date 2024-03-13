@@ -209,10 +209,11 @@ return {
 
   {
     "mfussenegger/nvim-lint",
-    config = function(_)
-      require("lint").linters_by_ft = {
-        lua = { "luacheck" },
-      }
+    opts = function()
+      return require("plugins.configs.lint")
+    end,
+    config = function(_, _)
+      require("plugins.configs.lint")
     end,
   },
 }

@@ -1,6 +1,7 @@
 return {
   formatters_by_ft = {
     css = { "prettier" },
+    sh = { "shfmt" },
     fish = { "fish_indent" },
     html = { "prettier" },
     json = { "prettier" },

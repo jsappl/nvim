@@ -6,7 +6,7 @@ function M.setup(on_attach)
   nls.setup({
     sources = {
       nls.builtins.diagnostics.chktex.with({
-        args = { "-q", "-f%l:%c:%d:%k:%n:%m\n" , "-I" },
+        args = { "-q", "-f%l:%c:%d:%k:%n:%m\n", "-I" },
       }),
       nls.builtins.diagnostics.mypy,
       nls.builtins.diagnostics.flake8,

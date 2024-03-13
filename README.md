@@ -42,29 +42,15 @@ Read and follow instructions from
 ## Python
 
 ```shell
-pacman -S ruff
+pacman -S ruff flake8 mypy
 ```
 
 ## Lua
 
 We use `luacheck` and `stylua`.
 
-**Note:** Tried `luaformatter` first, but the out-of-box experience with `stylua` is just much better. But comes of cost
-of adding `rust` and using its package manager.
-
 ```shell
-pacman -S luarocks
-
-luarocks install luacheck
-```
-
-```shell
-pacman -S rust
-
-cargo install stylua
-
-ln -s ~/.cargo/bin/stylua ~/bin
-chmod +x ~/bin/stylua
+pacman -S luacheck stylua
 ```
 
 ## Markdown, HTML, CSS, JSON and YAML
@@ -85,10 +71,11 @@ Chktex is already part of TeXLive.
 
 ## Bash
 
-We install `shellcheck`, which is programmed in Haskell and comes with a few dependencies.
+We don't install `shellcheck`, because it is programmed in Haskell and comes with a lot of dependencies. We only use
+`shfmt`.
 
 ```shell
-pacman -S shellcheck
+pacman -S shfmt
 ```
 
 ## Debuggers
