@@ -1,4 +1,4 @@
-local utils = require("utils")
+local maphelper = require("utils.mappings")
 
 -- map leader
 vim.g.mapleader = " "

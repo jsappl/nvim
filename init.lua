@@ -16,7 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- TODO: nice ordering. mapleader has to be set before lazy (odd)
-require("mappings")
+require("keymaps")
 
 require("lazy").setup("plugins", require("plugins.configs.lazy"))
 

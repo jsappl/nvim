@@ -1,7 +1,6 @@
 local api = vim.api
 
 local M = {}
-
 -- local map helper
 local function map(mode, key, result, opts, defaults)
   opts = vim.tbl_extend("force", { silent = true }, defaults or {}, opts or {})

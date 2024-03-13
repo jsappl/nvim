@@ -11,6 +11,7 @@
 return {
   -- UI
   { "Mofiqul/dracula.nvim", lazy = false, priority = 1000 },
+
   {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
@@ -196,6 +197,12 @@ return {
       return require("plugins.configs.conform")
     end,
     config = function(_, opts)
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*",
+        callback = function(args)
+          require("utils.formatting").format_on_save({ bufnr = args.buf })
+        end,
+      })
       require("conform").setup(opts)
     end,
   },

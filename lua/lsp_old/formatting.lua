@@ -21,7 +21,7 @@ end
 
 function M.format()
   if M.autoformat then
-    vim.lsp.buf.format()
+    require("conform").format()
   end
 end
 
