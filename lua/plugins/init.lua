@@ -216,4 +216,35 @@ return {
       require("plugins.configs.lint")
     end,
   },
+
+  -- DAP
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = {
+      {
+        "rcarriga/nvim-dap-ui",
+        -- stylua: ignore
+        opts = {},
+        config = function(_, _)
+          require("plugins.configs.dap")
+        end,
+      },
+      {
+        "theHamsta/nvim-dap-virtual-text",
+        opts = {},
+      },
+      {
+        "mfussenegger/nvim-dap-python",
+        opts = {},
+        config = function(_, _)
+          -- language-specifc
+          require("dap-python").setup("/usr/bin/python")
+        end,
+      },
+    },
+    opts = {},
+    config = function(_, _)
+      -- nop
+    end,
+  },
 }

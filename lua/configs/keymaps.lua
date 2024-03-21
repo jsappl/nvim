@@ -69,37 +69,38 @@ maphelper.nnoremap("<leader>m", "<cmd>Neotree reveal<cr>")
 -- -- peek markdown preview
 -- utils.nnoremap("<leader>tp", "<cmd>lua require('plugins.peek').toggle()<CR>")
 --
--- -- nvim-dap
+-- nvim-dap
+
+maphelper.nnoremap("<F5>", "<cmd>lua require('dap').continue()<cr>")
+maphelper.nnoremap("<F10>", "<cmd>lua require('dap').step_over()<cr>")
+maphelper.nnoremap("<F11>", "<cmd>lua require('dap').step_into()<cr>")
+maphelper.nnoremap("<F12>", "<cmd>lua require('dap').step_out()<cr>")
+maphelper.nnoremap("<Leader>b", "<cmd>lua require('dap').toggle_breakpoint()<cr>")
+-- TODO start with a few functional key mappings and in README describe all key mappings including example
+--maphelper.nnoremap("<Leader>B", "<cmd>lua require('dap').set_breakpoint()<cr>")
+--maphelper.nnoremap(
+--  "<Leader>lp",
+--  "<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>"
+--)
+--maphelper.nnoremap("<Leader>dr", "<cmd>lua require('dap').repl.open()<cr>")
+--maphelper.nnoremap("<Leader>dl", "<cmd>lua require('dap').run_last()<cr>")
 --
--- utils.nnoremap("<F5>", "<cmd>lua require('dap').continue()<cr>")
--- utils.nnoremap("<F10>", "<cmd>lua require('dap').step_over()<cr>")
--- utils.nnoremap("<F11>", "<cmd>lua require('dap').step_into()<cr>")
--- utils.nnoremap("<F12>", "<cmd>lua require('dap').step_out()<cr>")
--- utils.nnoremap("<Leader>b", "<cmd>lua require('dap').toggle_breakpoint()<cr>")
--- utils.nnoremap("<Leader>B", "<cmd>lua require('dap').set_breakpoint()<cr>")
--- utils.nnoremap(
---   "<Leader>lp",
---   "<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>"
--- )
--- utils.nnoremap("<Leader>dr", "<cmd>lua require('dap').repl.open()<cr>")
--- utils.nnoremap("<Leader>dl", "<cmd>lua require('dap').run_last()<cr>")
+--maphelper.nnoremap("<Leader>dh", "<cmd>lua require('dap.ui.widgets').hover()<cr>")
+--maphelper.vnoremap("<Leader>dh", "<cmd>lua require('dap.ui.widgets').hover()<cr>")
 --
--- utils.nnoremap("<Leader>dh", "<cmd>lua require('dap.ui.widgets').hover()<cr>")
--- utils.vnoremap("<Leader>dh", "<cmd>lua require('dap.ui.widgets').hover()<cr>")
+--maphelper.nnoremap("<Leader>dp", "<cmd>lua require('dap.ui.widgets').preview()<cr>")
+--maphelper.vnoremap("<Leader>dp", "<cmd>lua require('dap.ui.widgets').preview()<cr>")
+
+--TODO move funciton to plugin and provide as module method
+--maphelper.nnoremap("<Leader>df", function()
+--  local widgets = require("dap.ui.widgets")
+--  widgets.centered_float(widgets.frames)
+--end)
+--maphelper.nnoremap("<Leader>ds", function()
+--  local widgets = require("dap.ui.widgets")
+--  widgets.centered_float(widgets.scopes)
+--end)
 --
--- utils.nnoremap("<Leader>dp", "<cmd>lua require('dap.ui.widgets').preview()<cr>")
--- utils.vnoremap("<Leader>dp", "<cmd>lua require('dap.ui.widgets').preview()<cr>")
---
--- --TODO move funciton to plugin and provide as module method
--- --utils.nnoremap("<Leader>df", function()
--- --  local widgets = require("dap.ui.widgets")
--- --  widgets.centered_float(widgets.frames)
--- --end)
--- --utils.nnoremap("<Leader>ds", function()
--- --  local widgets = require("dap.ui.widgets")
--- --  widgets.centered_float(widgets.scopes)
--- --end)
---
--- -- nvim-dap-python
--- utils.nnoremap("<Leader>dn", "<cmd>lua require('dap-python').test_method()<cr>")
--- utils.nnoremap("<Leader>df", "<cmd>lua require('dap-python').test_class()<cr>")
+---- nvim-dap-python
+--maphelper.nnoremap("<Leader>dn", "<cmd>lua require('dap-python').test_method()<cr>")
+--maphelper.nnoremap("<Leader>df", "<cmd>lua require('dap-python').test_class()<cr>")
