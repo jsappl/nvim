@@ -209,9 +209,7 @@ return {
 
   {
     "mfussenegger/nvim-lint",
-    opts = function()
-      return require("plugins.configs.lint")
-    end,
+    opts = {},
     config = function(_, _)
       require("plugins.configs.lint")
     end,
